@@ -1,0 +1,42 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,5%);
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    margin-top: 200px;
+  }
+  
+  .PutCep {
+    width: 100%;
+    margin-left: 95px;
+    margin-top: 10px;
+    color: #2b646c;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .PutData {
+    border-radius: 10%;
+    width: 100px;
+    height: 30px;
+    background-color: #16c7b7;
+  }
+  
+  .Cep {
+    margin-left: 50px;
+    margin-top: 15px;
+    color: #a9381f;
+  }
+  
+  .DataCep {
+    margin-left: 0px;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 12px;
+    color: #2b646c;
+  }
+  
