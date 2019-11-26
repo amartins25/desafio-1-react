@@ -6,6 +6,8 @@
 
 html {
     background-color: #3d7eaa;
+    background: -webkit-linear-gradient(to right, #1cd8d2, #93edc7); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1cd8d2, #93edc7);
 }
 
 .box {
