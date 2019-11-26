@@ -3,7 +3,6 @@
     text-align: center;
     display: flex;
     display: grid;
-    grid-template-columns: repeat(3, 120px);
     width: 100%;
     justify-content: center;
     height: 100%;

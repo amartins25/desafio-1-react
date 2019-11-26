@@ -5,7 +5,7 @@ export default class Form extends Component {
     render() {
         return (
             <div>
-                <Form className="PutData" placeholder="00000000" />
+                <input className="PutData" placeholder="00000000"></input>
             </div>
         )
     }
