@@ -1,18 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Main from './Components/Main/Main'
+import '../src/styles.css'
 
-import "./styles.css";
-
-function App() {
-  return (
-    <div className="App">
-      <span className="Cep">CEP:*</span>
-      <input className="PutData"></input>
-      <span className="DataCep">Não sei meu CEP</span>
-      <span className="PutCep">Insira o CEP</span>
+ReactDOM.render(
+    <div className="box">
+        <h1 className="title">BuscaCEP</h1>
+        <Main />
     </div>
-  );
-}
+, document.getElementById('root'));
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+
