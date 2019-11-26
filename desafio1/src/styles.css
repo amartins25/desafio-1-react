@@ -13,15 +13,20 @@ html {
 .box {
     background-color: #fff;
     width: 60%;
+    height: 200px;
     margin: 0 auto;
-    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 8%);
 
 }
   
 .PutCep {
     width: 100%;
-    margin-left: 110px;
+    margin-left: 113px;
     margin-top: 10px;
+    padding-bottom: 140px;
     color: #2b646c;
     font-size: 18px;
     font-weight: bold;
