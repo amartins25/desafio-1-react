@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './Components/Main/Main'
 import '../src/styles.css'
 import Form from './Components/Form/Form'
 
 ReactDOM.render(
     <div className="box">
         <h1 className="title">BuscaCEP</h1>
-        <Main />
+        <span className="Cep">CEP:*</span>
         <Form />
+        <span className="DataCep">Não sei meu CEP</span>
+        <span className="PutCep">Insira o CEP</span>
+        
+        
     </div>
     
 , document.getElementById('root'));
