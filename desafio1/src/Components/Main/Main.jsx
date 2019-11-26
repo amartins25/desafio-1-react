@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Main.css'
+import Form from './Components/Form/Form'
 
 export default class Main extends Component {
 
@@ -9,7 +10,7 @@ export default class Main extends Component {
       <div>
         <div className="App">
           <span className="Cep">CEP:*</span>
-          <input className="PutData" placeholder="00000000"></input>
+          <Form />
           <span className="DataCep">Não sei meu CEP</span>
           <span className="PutCep">Insira o CEP</span>
         </div>

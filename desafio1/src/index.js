@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './Components/Main/Main'
+
 import '../src/styles.css'
 
 ReactDOM.render(
     <div className="box">
         <h1 className="title">BuscaCEP</h1>
         <Main />
+        <Form />
+        
     </div>
 , document.getElementById('root'));
 
