@@ -13,7 +13,7 @@ ReactDOM.render(
           <span className="DataCep">Não sei meu CEP</span>
           <span className="PutCep">Insira o CEP</span>
           <Button />
-          <span> Próximo passo: Forma de pagamento</span>
+          <span className="NextStep"> Próximo passo: Forma de pagamento</span>
       </div>
 
       

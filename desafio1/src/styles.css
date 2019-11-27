@@ -47,3 +47,11 @@ html {
     color: #2b646c;
 }
   
+.NextStep {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    width: 60%;
+    margin-top: 160px;
+    height: 100%;
+}
