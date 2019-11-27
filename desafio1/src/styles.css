@@ -17,14 +17,15 @@ html {
     margin: 0 auto;
     padding-top: 30px;
     align-items: center;
+    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 8%);
+    grid-template-columns: repeat(3, 100px);
 
 }
   
 .PutCep {
     width: 100%;
-    margin-left: 113px;
+    margin-left: 100px;
     margin-top: 10px;
     padding-bottom: 140px;
     color: #2b646c;
@@ -33,8 +34,7 @@ html {
 }
   
 .Cep {
-    margin-left: 50px;
-    padding-right: 10px;
+    margin-left: 20px;
     margin-top: 15px;
     color: #a9381f;
     font-size: 18px;
@@ -42,7 +42,7 @@ html {
 }
   
 .DataCep {
-    margin-left: 15px;
+    margin-left: 30px;
     margin-top: 15px;
     width: 100%;
     font-size: 12px;

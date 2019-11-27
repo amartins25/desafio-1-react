@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/styles.css'
 import Form from './Components/Form/Form'
-import Button from './Components/Button/Button'
 
 ReactDOM.render(
     <div className="section">
@@ -12,7 +11,6 @@ ReactDOM.render(
           <Form />
           <span className="DataCep">Não sei meu CEP</span>
           <span className="PutCep">Insira o CEP</span>
-          <Button />
       </div>
     </div>
     
