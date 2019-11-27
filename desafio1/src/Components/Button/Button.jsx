@@ -1,12 +1,11 @@
-import React, { Component } from '.react'
+import React, { Component } from 'react'
 import './Button.css'
-
 
 export default class Button extends Component {
     render() {
         return (
             <div>
-                <button>Avançar</button>
+                <button className="button">Avançar</button>
             </div>
         )
     }
