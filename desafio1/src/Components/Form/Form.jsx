@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './Form.css'
+import ViaCep from 'react-via-cep'
+
+
 
 export default class Form extends Component {
+  
     render() {
         return (
             <div>

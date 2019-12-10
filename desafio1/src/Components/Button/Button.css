@@ -5,15 +5,15 @@
     letter-spacing: 3px;
     padding: 6px 10px;
     cursor:pointer;
-    color: #fff;
+    color: black;
     height: 50px;
     width: 110px;
   
     text-align: center;
     text-shadow: 0 -1px 1px #64799e;
-    background: #a5b8da;
+    background: #8be2af ;
     
-    border: 1px solid #5c6f91;
+    border: 1px solid #5c6f913;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;

@@ -1,23 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/styles.css'
-import Form from './Components/Form/Form'
-import Button from './Components/Button/Button'
+import App from './App'
 
 ReactDOM.render(
-    <div className="section">
-      <h1 className="title">BuscaCEP</h1>
-      <div className="box">
-          <span className="Cep">CEP:*</span>
-          <Form />
-          <span className="DataCep">Não sei meu CEP</span>
-          <span className="PutCep">Insira o CEP</span>
-          <Button />
-          <span className="NextStep"> Próximo passo: Forma de pagamento</span>
-      </div>
-
-      
-    </div>
+  <App />
+    
     
 , document.getElementById('root'));
 
