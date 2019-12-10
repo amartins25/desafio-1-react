@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Form.css'
-import ViaCep from 'react-via-cep'
 
-
+const input = ({})
 
 export default class Form extends Component {
   

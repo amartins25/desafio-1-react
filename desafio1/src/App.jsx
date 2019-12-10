@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ViaCep from './Components/Form/Form'
+import Input from './Components/Form/Form'
 import Button from './Components/Button/Button'
 import '../src/styles.css'
-import axios from 'axios';
 
 class App extends Component {
     state = {
@@ -10,7 +9,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        const url = 'http://apps.widenet.com.br/busca-cep/api/cep/22290-240.json';
+        const url = 'http://apps.widenet.com.br/busca-cep/api/cep.json';
         
         fetch(url)
             .then(response =>{
@@ -33,17 +32,15 @@ class App extends Component {
             <h1 className="title">BuscaCEP</h1>
             <div className="box">
                 <span className="Cep">CEP:*</span>
-                <ViaCep
-                name="cep"
-                id="cep"
-                onClick={() => this.componentDidMount()}
-                
+                <Input
+                onClick={() => this.value()}
                 />
                 <span className="DataCep">Não sei meu CEP</span>
                 <span className="PutCep">Insira o CEP</span>
                 <Button />
                 <span className="NextStep"> Próximo passo: Forma de pagamento</span>
             </div>
+    
         </div>
         
     )}
