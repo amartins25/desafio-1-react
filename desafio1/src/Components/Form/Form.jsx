@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css'
 
-const input = ({})
-
 export default class Form extends Component {
   
     render() {
