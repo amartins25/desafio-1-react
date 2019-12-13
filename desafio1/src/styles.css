@@ -2,66 +2,77 @@
     width: 100%;
     text-align: center;
     align-items: center;
+    font-size: 40px;
 }
 
 html {
     background-color: #3d7eaa;
     background: -webkit-linear-gradient(to right, #1cd8d2, #93edc7); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #1cd8d2, #93edc7);
+    width: 100%;
+}
+
+body {
+    background: -webkit-linear-gradient(rgb(124, 83, 190), rgba(135, 60, 255, 0.0) 0%),
+    -webkit-linear-gradient(-45deg, rgba(36, 161, 99, 0.74) 45%, rgb(172, 192, 185) 0%);
+}
+
+.section {
+    padding-bottom: 15px;
 }
 
 .box {
     background-color: #fff;
     width: 60%;
-    height: 200px;
+    height: 300px;
     margin: 0 auto;
-    padding-top: 30px;
+    display: flex;
+    text-align: center;
     align-items: center;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
+}
 
-}
-  
-.PutCep {
-    width: 100%;
-    margin-left: 100px;
-    margin-top: 10px;
-    padding-bottom: 140px;
-    color: #2b646c;
-    font-size: 18px;
-    font-weight: bold;
-}
-  
 .Cep {
-    margin-left: 20px;
+    margin-left: 22px;
     color: #a9381f;
     font-size: 18px;
     letter-spacing: 3px;
+    font-weight: bold;
+    margin-top: 10px;
 }
-  
-.DataCep {
-    margin-left: 30px;
+
+.PutCep {
     width: 100%;
-    font-size: 12px;
+    margin-left: 10px;
     color: #2b646c;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
-  
-.NextStep {
-    position: absolute;
-    justify-content: center;
+
+.PutData {
+    border-radius: 10%;
+    width: 100px;
+    height: 30px;
+    background-color: #C4D7DA;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.DataCep {
     display: flex;
-    width: 60%;
-    margin-top: 160px;
-    height: 100%;
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+    color: #2b646c;
 }
 
 .button{
-    margin:10px 55px 10px 0;
+    margin:10px 55px 10px 0px;
     font-weight: bold;
     line-height: 2;
     letter-spacing: 3px;
-    padding: 6px 10px;
+    padding: 6px 0px;
     cursor:pointer;
     color: black;
     height: 50px;
@@ -75,4 +86,11 @@ html {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+}
+
+.NextStep {
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    height: 100%;
 }
