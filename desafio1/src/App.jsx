@@ -35,7 +35,7 @@ class App extends Component {
     }
 
     getZipCode() {
-        let url = "http://apps.widenet.com.br/busca-cep/api/cep/cep.json"
+        let url = "http://apps.widenet.com.br/busca-cep/api/cep/<cepCode>.<format>"
         fetch(url)
         .then((response) => response.json())
         .then((responseJson) =>
@@ -52,7 +52,32 @@ class App extends Component {
         if (cep !== null) {
           return (
             <div className="section">
-               <div className="box"> 
+               <div className="box">
+                <div>
+                    <label>Cep</label>
+                    <input>
+                    </input>
+                </div>
+                <div>
+                    <label>Endereço</label>
+                    <input>
+                    </input>
+                </div>
+                <div>
+                    <label>Bairro</label>
+                    <input>
+                    </input>
+                </div>
+                <div>
+                    <label>Cidade</label>
+                    <input>
+                    </input>
+                </div>
+                <div>
+                    <label>Estado</label>
+                    <input>
+                    </input>
+                </div>
                 <p className="DataCep">{cep}</p>
                 <button className="button" onClick={this.handleLogout}>Sair</button>
               </div>
@@ -94,5 +119,3 @@ class App extends Component {
 }
 
 export default App;
-
-
