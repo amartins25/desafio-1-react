@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../src/styles.css'
+import axios from 'axios'
 
 
 class App extends Component {
@@ -8,11 +9,38 @@ class App extends Component {
         this.state = {
             cep: null,
         }
-        this.getZipCode = this.getZipCode.bind(this)
+        this.getAddress = this.getAddress.bind(this)
     }
     
     handleSubmit = (e) => {
-        // let url = "http://apps.widenet.com.br/busca-cep/api/cep/cep.json"
+
+        e.preventDefault(); 
+        const cep = e.target.cep.value;
+        localStorage.setItem('cep', cep);
+        // window.location.reload();
+        this.getAddress(cep)
+    }
+
+    handleLogout = (cep) => {
+        localStorage.removeItem('cep', cep);
+        window.location.reload();
+        console.log(this.handleLogout)
+    }
+
+    componentDidMount() {
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
+          .then(res => {
+            const cep = res.data;
+            this.setState({ cep });
+          })
+    }
+
+
+    getAddress(cep) {
+        axios
+            .get('http://apps.widenet.com.br/busca-cep/api/cep/cep.json')
+            .then(response => (this.info = response.data.bpi))
+        // let url = "http://apps.widenet.com.br/busca-cep/api/cep/" + cep + ".json"
         // fetch(url)
         // .then((response) => response.json())
         // .then((responseJson) =>
@@ -21,30 +49,7 @@ class App extends Component {
         //         cep: responseJson,
         //     });
         // })
-
-        e.preventDefault(); 
-        const cep = e.target.elements.cep.value;
-        localStorage.setItem('cep', cep);
-        window.location.reload();
-    }
-
-    handleLogout = () => {
-        localStorage.removeItem('cep/cep');
-        window.location.reload();
-        console.log(this.handleLogout)
-    }
-
-    getZipCode() {
-        let url = "http://apps.widenet.com.br/busca-cep/api/cep/<cepCode>.<format>"
-        fetch(url)
-        .then((response) => response.json())
-        .then((responseJson) =>
-        {
-            this.setState({
-                cep: responseJson,
-            });
-        })
-        console.log(this.responseJson)
+        // console.log(this.cep)
     }
 
     render(){
@@ -88,7 +93,6 @@ class App extends Component {
             <div className="section">
                 <h1 className="title">SearchCEP</h1>
                 <div className="box">
-                    
                     <form className="PutCep" onSubmit={this.handleSubmit}>
                             <label className="Cep">CEP*</label>
                             <input className="PutData" type="text" name="cep"  required />
@@ -98,24 +102,13 @@ class App extends Component {
                             <span className="NextStep"> Próximo passo: Forma de pagamento</span>
                     </form>
                 </div>
+                <ul>
+                    { this.state.cep.map(cep => <li>{cep.name}</li>)}
+                </ul>
             </div>
-            // <div className="section">
-            //     <h1 className="title">SearchCEP</h1>
-            //     <div className="box">
-            //         <span className="Cep">CEP:*</span>
-            //         <Input
-            //         />
-            //         <span className="DataCep">Não sei meu CEP</span>
-            //         <span className="PutCep">Insira o CEP</span>
-            //         <button onClick={() => this.getZipCode()} className="button">Search</button>
-            //         <span className="NextStep"> Próximo passo: Forma de pagamento</span>
-            //     </div>
-        
-            // </div>
             
         );
     }
-    
 }
 
 export default App;
