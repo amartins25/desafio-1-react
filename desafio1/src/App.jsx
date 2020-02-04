@@ -28,11 +28,17 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
-          .then(res => {
-            const cep = res.data;
-            this.setState({ cep });
-          })
+        const url ='https://jsonplaceholder.typicode.com/users'
+        
+        axios.get(url).then(response => {
+            const address = response.data
+            console.log(address)
+        })
+        // axios.get(`https://jsonplaceholder.typicode.com/users`)
+        //   .then(res => {
+        //     const cep = res.data;
+        //     this.setState({ cep });
+        //   })
     }
 
 
@@ -103,7 +109,7 @@ class App extends Component {
                     </form>
                 </div>
                 <ul>
-                    { this.state.cep.map(cep => <li>{cep.name}</li>)}
+                    {/* { this.state.cep.map(cep => <li>{cep.name}</li>)} */}
                 </ul>
             </div>
             
